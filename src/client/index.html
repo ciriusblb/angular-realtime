@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real Time Angular</title>
+</head>
+<body>
+	<rt-gauge></rt-gauge>	
+	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+	<script type="text/javascript" src="app/app.module.js"></script>
+
+	<script type="text/javascript" src="app/rtCharts/rtCharts.module.js"></script>
+	<script type="text/javascript" src="app/rtCharts/rtGaugeDirective.js"></script>
+
+	<script type="text/javascript" src="app/rtMetricWebService/rtWebMetricService.js"></script>
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script>
+        google.load('visualization','1.0', { 'packages': ['gauge'] });
+        google.setOnLoadCallback(function () {
+            angular.bootstrap(document, ['app']);
+        });
+    </script>
+</body>
+</html>
